@@ -1,0 +1,64 @@
+###
+### Cliente Endereço
+###
+
+
+POST http://localhost:8080/clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Maria Antonia",
+    "cpf": "12345678987",
+    "idade": 32,
+    "email": "maria@mail.com",
+    "endereco": {
+        "cep": "38408204"      
+    },
+    "enderecoEspecifico": {
+        "numero": "85",
+        "complemento": "100"
+    }
+
+}
+
+### Adicionando outro cliente
+POST http://localhost:8080/clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "João Silveira",
+    "cpf": "98765432112",
+    "idade": 45,
+    "email": "joao@mail.com",
+    "endereco": {
+        "cep": "38405050"      
+    },
+    "enderecoEspecifico": {
+        "numero": "820",
+        "complemento": ""
+    }
+
+}
+
+### Listar todos os clientes
+GET http://localhost:8080/clientes HTTP/1.1
+
+
+### Atualizar nome cliente
+PUT  http://localhost:8080/clientes/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "maria",
+    "cpf": "123545",
+    "idade": 32,
+    "email": "teste@mail.com",
+    "endereco": {
+        "cep": "38408204"      
+    },
+    "enderecoEspecifico": {
+        "numero": "22",
+        "complemento": "204"
+    }
+
+}
